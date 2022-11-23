@@ -1,5 +1,5 @@
 
-
+/*
 var cacheName = "appV3";
 var contenidoCache = [
   "app.js",
@@ -14,7 +14,7 @@ var contenidoCache = [
   "assets/css/bootstrap.min.css",
   "assets/js/script.js",
 ];
-/*
+
 self.addEventListener("install", (e) => {
   console.log("instalado");
   e.waitUntil(
