@@ -45,7 +45,7 @@ importScripts(
     );
 
 workbox.precaching.precacheAndRoute([
-    
+    "index.html",
     "recomendaciones.html",
     "offline.html",
     "icons/imagenAlgodon.png"
