@@ -123,9 +123,7 @@
         eventoPrompt = e;
       });
       btnInstalar = document.getElementById("instalar");
-      if (eventoPrompt==null) {
-        btnInstalar.style.display='none';
-      }else{
+     
         btnInstalar.addEventListener('click', (e) =>{
         btnInstalar.style.display='none';
         eventoPrompt.prompt();
@@ -138,7 +136,7 @@
           eventoPrompt=null;
         });
       });
-    }
+    
       //Notificaciones
       let botonNotificaciones = document.getElementById("instalarN");
       botonNotificaciones.addEventListener('click',function(e){
