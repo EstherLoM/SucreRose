@@ -123,18 +123,22 @@
         eventoPrompt = e;
       });
       btnInstalar = document.getElementById("instalar");
-      btnInstalar.addEventListener('click', (e) =>{
+      if (eventoPrompt==null) {
+        btnInstalar.style.display='none';
+      }else{
+        btnInstalar.addEventListener('click', (e) =>{
         btnInstalar.style.display='none';
         eventoPrompt.prompt();
         eventoPrompt.userChoice.then((choiceResult)=>{
           if(choiceResult.outcome==='acepted'){
           console.log("dl usuario instalo la app");
           }else{
-            console.log("el usuario rechazo");
+            console.log("el usuario rechazo la instalacion");
           }
           eventoPrompt=null;
         });
       });
+    }
       //Notificaciones
       let botonNotificaciones = document.getElementById("instalarN");
       botonNotificaciones.addEventListener('click',function(e){
