@@ -105,8 +105,8 @@
        <span class="lines line-2"></span>
        <span class="lines line-3"></span>
      </label>
-      <a id="instalar" href="#" class="menu-item orange"> Install </a>
-      <a href="#" class="menu-item red">Follow</a>
+      <a id="instalar" href=""" class="menu-item orange"> <i class="fa fa-shopping-bag" aria-hidden="true"></i> </a>
+      <a id="instalarN" href="" class="menu-item red"> <i class="fa fa-bell" aria-hidden="true"></i> </a>
    </nav>
   </div>
 </div>
@@ -136,25 +136,26 @@
         });
       });
       //Notificaciones
-      let btnNot = Document.getElementById("instalarN");
-      btnNot.addEventListener('click',function(e){
-        Notification.requestPermission().then(function(result){
-          if(result==='garanted'){
-            randomNotification();
-          }
-        });
+      let botonNotificaciones = document.getElementById("instalarN");
+      botonNotificaciones.addEventListener('click',function(e){
+       Notification.requestPermission().then(function(result){
+        if(result==='granted'){
+          randomNotifiacion();
+        }
+       }) ;
       });
 
-      function randomNotification(){
-        let nTitulo= "Titutlo";
-        let nBody= "Te invitamos a conocer nuestro contenido de primera mano";
-        let nImage = "./icons/icon-64.png";
-        let options ={
-          body: nbody,
-          icon: nImage
+      function randomNotifiacion(){
+        let nTitle="Notificaciones actividas";
+        let nbody="No te pierdas de las actualizaciones de recetas";
+        let nImage="./icons/imagenA2.jfif";
+        let options={
+            body:nbody,
+            icon:nImage
+
         }
-        let noti = new Notification(nTitulo, options);
-        setTimeout(randomNotification,10000);
+        let notif= new Notification(nTitle,options);
+        setTimeout(randomNotifiacion,5000);
       }
 
     </script>
