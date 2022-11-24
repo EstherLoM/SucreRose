@@ -1,5 +1,5 @@
 
-
+/*
 var cacheName = "appV3";
 var contenidoCache = [
   "app.js",
@@ -14,7 +14,7 @@ var contenidoCache = [
   "assets/css/bootstrap.min.css",
   "assets/js/script.js",
 ];
-/*
+
 self.addEventListener("install", (e) => {
   console.log("instalado");
   e.waitUntil(
@@ -41,8 +41,8 @@ self.addEventListener("fetch", (e) => {
 */
 
 importScripts(
-    'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js'
-    );
+  'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js'
+);
 
 workbox.precaching.precacheAndRoute([
     "index.html",
