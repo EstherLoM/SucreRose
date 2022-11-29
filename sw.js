@@ -49,7 +49,13 @@ workbox.precaching.precacheAndRoute([
     'recomendaciones.html',
     'offline.html',
     'index.css',
-    'icons/imagenAlgodon.pn'"
+    "manifest.webmanifest",
+    "sw.js",
+    "app.js",
+  'index.js',
+  'firebase.js',
+  'script.js',
+  'icons/imagenAlgodon.png'
 ]);
 
 workbox.routing.registerRoute(
