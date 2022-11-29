@@ -45,10 +45,11 @@ importScripts(
 );
 
 workbox.precaching.precacheAndRoute([
-    "index.html",
-    "recomendaciones.html",
-    "offline.html",
-    "icons/imagenAlgodon.png"
+    'index.html',
+    'recomendaciones.html',
+    'offline.html',
+    'index.css',
+    'icons/imagenAlgodon.pn'"
 ]);
 
 workbox.routing.registerRoute(
